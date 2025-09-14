@@ -1,5 +1,7 @@
 pip install -r requirements.txt
 
+python app.py
+
 # Health Advisor Web Application
 
 A simple web application built with Python, Flask, and MongoDB that allows users to register, log in, and track their health metrics like Body Mass Index (BMI).
