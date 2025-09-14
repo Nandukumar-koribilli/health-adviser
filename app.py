@@ -80,7 +80,9 @@ def health_details():
             'age': data.get('age'),
             'gender': data.get('gender'),
             'height': data.get('height'),
-            'weight': data.get('weight')
+            'weight': data.get('weight'),
+            'income': data.get('income'),
+            'activity': data.get('activity')
         }},
         upsert=True
     )
@@ -90,8 +92,8 @@ def health_details():
 
 @app.route('/')
 def serve_signup_page():
-    # This now serves the signup page as the default starting page.
-    return send_from_directory(app.static_folder, 'signup.html')
+    # This now serves the new index.html as the default landing page.
+    return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/<path:path>')
 def serve_static_files(path):

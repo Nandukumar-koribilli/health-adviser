@@ -23,9 +23,28 @@
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
+      <select id="income" required>
+        <option value="" disabled selected>Select Income Class</option>
+        <option value="poor">Poor</option>
+        <option value="middle">Middle Class</option>
+        <option value="rich">Rich</option>
+      </select>
+      <select id="activity" required>
+        <option value="" disabled selected>Select Activity Level</option>
+        <option value="low">Low</option>
+        <option value="moderate">Moderate</option>
+        <option value="high">High</option>
+      </select>
       <button type="submit">Calculate</button>
     </form>
-    <div id="healthResult" style="margin-top: 20px;"></div>
+    <!-- This div will be populated with the detailed health report -->
+    <div id="healthReport" class="report-container" style="display: none;">
+      <h2>Your Personalized Health Report</h2>
+      <div id="metricsSection"></div>
+      <div id="dietSection" class="report-section"></div>
+      <div id="exerciseSection" class="report-section"></div>
+      <div id="yogaSection" class="report-section"></div>
+    </div>
   </div>
 
   <script src="js/script.js"></script>
